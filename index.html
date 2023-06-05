@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Screen Sharing</title>
+  <style>
+    #videoContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    #video {
+      width: 80%;
+      height: 80%;
+      border: 1px solid black;
+    }
+    
+    #callButton {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+    }
+    
+    #shareScreenButton {
+      position: fixed;
+      top: 20px;
+      right: 100px;
+    }
+  </style>
+</head>
+<body>
+  <button id="callButton" onclick="startCall()">Call</button>
+  <button id="shareScreenButton" onclick="shareScreen()">Share Screen</button>
+  <div id="videoContainer">
+    <video id="video" autoplay></video>
+  </div>
+
+  <script src="https://cdn.socket.io/4.3.2/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
